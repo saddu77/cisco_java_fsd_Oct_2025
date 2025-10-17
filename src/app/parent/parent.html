@@ -1,0 +1,4 @@
+<!-- <app-child [name]="'John Doe'"></app-child> -->
+<p>Parent Component Recieved  Message is {{ recievedMsg }}</p>
+<app-child (msgEvent)="recieveMsg($event)"></app-child>
+

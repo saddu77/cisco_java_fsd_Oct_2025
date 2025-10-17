@@ -1,0 +1,48 @@
+<!-- <h2>My Home Page </h2> -->
+
+<!-- <h2>Name is  {{name}} and age is {{age}}</h2> -->
+
+<a [routerLink]="['/']">Logout</a>
+<h2>Structural Directives</h2>
+<!-- *ngIf, *ngFor, *ngSwitch -->
+
+<div *ngIf="isLoggedIn; else loginBlock">
+    <p>Welcome User !!!</p>
+</div>
+
+<ng-template #loginBlock>
+    <p>Please Login to continue !!!</p>
+</ng-template>
+
+<hr />
+<ul>
+    <li *ngFor="let name of names; let i = index"> 
+        {{i+1}} . {{name}}
+    </li>
+</ul>
+
+<hr />
+Status : {{status}}
+<div [ngSwitch]="status">
+    <div *ngSwitchCase="'approved'">The request has been approved</div>
+    <div *ngSwitchCase="'pending'">The request is still pending</div>
+    <div *ngSwitchCase="'rejected'">The request has been Rejected </div>  
+    <div *ngSwitchDefault>Please select a status.</div>
+</div>
+
+<button (click)="changeStatus('approved')">Approve</button>
+<button (click)="changeStatus('pending')">Set Pending </button>
+<button (click)="changeStatus('rejected')"> Rejected </button>
+
+<hr />
+<h2>Pipes Demo</h2>
+<!-- <p> Syntax : {{ data | pipeName }} </p> -->
+
+<p><b>Uppercase:</b> {{ name | uppercase }}</p>
+<p><b>Date (short):</b> {{ today | date:'short' }}</p>
+<p><b>Date (fullDate):</b> {{ today | date:'fullDate' }}</p>
+<p><b>Currency (INR):</b> {{ amount | currency:'INR' }}</p>
+<p><b>Number (2 decimals):</b> {{ amount | number:'1.2-2' }}</p>
+
+<hr />
+<app-parent></app-parent>
