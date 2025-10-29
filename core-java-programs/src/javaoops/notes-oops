@@ -1,0 +1,54 @@
+Parent class
+	default constructor - gets invoked upon creating an Object
+	parameterized constructor
+		this
+	
+Child class extends Parent - Inheritance
+	default constructor
+	parameterized constructor - gets invoked explicitly
+		super
+	getEmpDetails
+	
+Main class
+	main() method
+	
+	
+Multiple Inheritance
+
+	A  		B
+	
+	
+		C <- A or B
+		
+PolyMorphism :
+	
+Poly : means Many
+Morphic: 	behavior
+
+1. Function overloading:
+			-> same function name,return type but different number of arguments
+			-> same function name ,return type with same number of arguments but different dataTypes.
+
+2. Function overRiding	
+			-> same function name,return type and also same number of arguments
+			-> Inheritance has to happen
+		
+interface (New Features in Java 8):
+		1. Default Methods
+		2. Static Methods
+		3. Functional Interface
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	
