@@ -1,0 +1,3 @@
+base_url: "https://demo.testfire.net/login.jsp"
+browser: "chrome"
+implicit_wait: 10

@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Members</h2>
+<a href="/add_member" class="btn btn-success">Add Member</a>
+
+<table class="table mt-3">
+<tr>
+<th>ID</th><th>Name</th><th>Email</th>
+</tr>
+{% for m in members %}
+<tr>
+<td>{{m.id}}</td>
+<td>{{m.name}}</td>
+<td>{{m.email}}</td>
+</tr>
+{% endfor %}
+</table>
+{% endblock %}

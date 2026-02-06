@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Issue Book</h2>
+
+<form method="post">
+
+<select name="book_id" class="form-control">
+{% for b in books %}
+<option value="{{b.id}}">{{b.title}}</option>
+{% endfor %}
+</select><br>
+
+<select name="member_id" class="form-control">
+{% for m in members %}
+<option value="{{m.id}}">{{m.name}}</option>
+{% endfor %}
+</select><br>
+
+<input type="date" name="issue_date" class="form-control"><br>
+
+<button class="btn btn-primary">Issue</button>
+
+</form>
+{% endblock %}
